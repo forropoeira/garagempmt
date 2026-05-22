@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Os Pimenta | Eventos Automotivos</title>
+<style>
+:root{--black:#020302;--green:#00c853;--muted:#b9b9b9;--line:rgba(255,255,255,.08)}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+html{scroll-behavior:smooth} body{background:#020302;color:#fff;overflow-x:hidden} a{text-decoration:none;color:inherit}
+.topbar{height:96px;display:flex;align-items:center;justify-content:space-between;padding:0 5.5%;border-bottom:1px solid var(--line);background:#020302;position:relative;z-index:50}
+.logo img{width:190px;display:block}.menu{display:flex;gap:42px;text-transform:uppercase;font-size:15px;font-weight:700;align-items:center}
+.menu a{padding:10px 0;border-bottom:2px solid transparent;white-space:nowrap}.menu a:hover,.menu .active{color:var(--green);border-color:var(--green)}
+.social-icons{display:flex;gap:22px;font-size:27px;color:var(--green)}.mobile-toggle{display:none;background:transparent;color:var(--green);border:1px solid rgba(0,200,83,.35);border-radius:10px;font-size:24px;width:44px;height:40px}
+.hero{width:100%;min-height:calc(100vh - 96px);background:url('capa-os-pimenta.jpg') center/cover no-repeat;display:flex;align-items:flex-end}
+.quick-area{width:100%;display:grid;grid-template-columns:repeat(4,1fr);padding:28px 5.5% 34px;gap:24px;background:linear-gradient(180deg,rgba(0,0,0,.72),#040504 75%)}
+.quick-card{text-align:center;padding:18px 16px}.quick-icon{font-size:34px;color:var(--green);display:block;margin-bottom:14px}.quick-card h3{margin-bottom:12px;text-transform:uppercase}.quick-card p{color:var(--muted);line-height:1.6}
+.content{padding:80px 5.5%;background:#050706}.section-title{margin-bottom:36px}.section-title h2{font-size:34px;text-transform:uppercase;margin-bottom:12px}.section-title span{color:var(--green)}.section-title p{color:var(--muted);line-height:1.6}
+.event-box{display:grid;grid-template-columns:1fr 1fr;background:#090d0a;border:1px solid var(--line);border-radius:24px;overflow:hidden}.event-image{min-height:360px;background:#070707}.event-info{padding:42px}.tag{display:inline-block;padding:8px 13px;border-radius:999px;background:rgba(0,200,83,.12);color:var(--green);margin-bottom:20px}.event-info h3{font-size:32px;margin-bottom:20px}.event-info ul{list-style:none;line-height:2}
+.btn{display:inline-block;padding:15px 22px;background:var(--green);color:#001106;border-radius:12px;font-weight:900;margin-top:20px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.gallery-card{background:#0b0f0d;border:1px solid var(--line);border-radius:22px;overflow:hidden}.gallery-img{
+  height:230px;
+  background:#090909;
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+}.gallery-body{padding:22px}.gallery-body small{display:block;margin-bottom:10px;color:var(--green);font-weight:900}.gallery-body h3{margin-bottom:10px}.gallery-body p{color:var(--muted);line-height:1.6}.gallery-footer{display:flex;justify-content:space-between;margin-top:16px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.about-card{padding:36px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(135deg,#0c130f,#060806)}.about-card h2{font-size:32px;margin-bottom:18px}.about-card span{color:var(--green)}.about-card p{color:var(--muted);line-height:1.75;margin-bottom:16px}
+footer{padding:34px 5.5%;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);flex-wrap:wrap;gap:14px}.whatsapp-float{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:var(--green);display:grid;place-items:center;font-size:28px;font-weight:900;color:#031007;z-index:100}
+@media(max-width:980px){.topbar{height:auto;min-height:82px;padding:18px 5%;flex-wrap:wrap;gap:14px}.logo img{width:165px}.mobile-toggle{display:block;margin-left:auto}.social-icons{display:none}.menu{display:none;width:100%;flex-direction:column;align-items:flex-start;gap:12px;padding:14px 0 4px;border-top:1px solid var(--line)}.menu.open{display:flex}.menu a{width:100%;padding:12px 0}.hero{min-height:62vh;background-size:contain;background-position:center top;background-color:#020302}.quick-area,.gallery-grid,.event-box,.about-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.topbar{min-height:72px;padding:14px 5%}.logo img{width:155px}.mobile-toggle{width:42px;height:38px;font-size:22px}.menu{font-size:13px}.hero{min-height:52vh;background-size:contain;background-position:center center;background-color:#020302}.quick-area{grid-template-columns:1fr;padding:22px 6% 28px;gap:8px}.quick-card{padding:18px 10px}.quick-icon{font-size:30px}.quick-card h3{font-size:15px}.quick-card p{font-size:14px}.content{padding:54px 6%}.section-title h2{font-size:27px}.event-box,.gallery-grid,.about-grid{grid-template-columns:1fr}.event-image{min-height:180px}.event-info,.about-card{padding:26px}.event-info h3,.about-card h2{font-size:25px}.gallery-img{
+  height:230px;
+  background:#090909;
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+}.gallery-footer{gap:12px;flex-wrap:wrap}.whatsapp-float{width:48px;height:48px;font-size:22px;right:16px;bottom:18px}footer{font-size:13px;padding-bottom:80px}}
+@media(max-width:390px){.logo img{width:138px}.hero{min-height:48vh}}
+
+.gallery-card{cursor:pointer}
+.album-modal{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:9999;display:none;padding:22px;overflow-y:auto}
+.album-modal.open{display:block}
+.album-header{max-width:1180px;margin:0 auto 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.album-header h2{font-size:28px;text-transform:uppercase;color:#fff}
+.album-header span{color:#00c853}
+.album-close{background:#00c853;color:#001106;border:0;border-radius:12px;padding:12px 18px;font-weight:900;cursor:pointer}
+.album-grid{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.album-grid img{
+  width:100%;
+  height:auto;
+  max-height:520px;
+  object-fit:contain;
+  background:#050505;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.08);
+}
+@media(max-width:780px){.album-grid{grid-template-columns:1fr}.album-grid img{
+  width:100%;
+  height:auto;
+  max-height:520px;
+  object-fit:contain;
+  background:#050505;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.08);
+}.album-header h2{font-size:21px}}
+
+</style>
+</head>
+<body>
+<header class="topbar"><a class="logo" href="#"><img src="logo-os-pimenta.png" alt="Os Pimenta"></a><button class="mobile-toggle" onclick="document.querySelector('.menu').classList.toggle('open')">☰</button><nav class="menu"><a class="active" href="#">Início</a><a href="#eventos">Eventos</a><a href="#galeria">Galeria</a><a href="#equipe">Equipe</a><a href="#patrocinadores">Patrocinadores</a><a href="#contato">Contato</a></nav><div class="social-icons"><a href="https://instagram.com/garage_pmt_011" target="_blank">◎</a><a href="https://wa.me/5511999999999" target="_blank">☏</a></div></header>
+<main><section class="hero"></section><div class="quick-area"><div class="quick-card"><span class="quick-icon">▣</span><h3>Próximo Evento</h3><p>Acompanhe onde estaremos no próximo fim de semana.</p></div><div class="quick-card"><span class="quick-icon">▧</span><h3>Galeria</h3><p>Confira os melhores registros dos eventos que já participamos.</p></div><div class="quick-card"><span class="quick-icon">♚</span><h3>Equipe</h3><p>Conheça nossa equipe e os projetos que movem a gente.</p></div><div class="quick-card"><span class="quick-icon">⚑</span><h3>Eventos</h3><p>Veja a lista completa de eventos que já marcamos presença.</p></div></div></main>
+<section class="content" id="eventos"><div class="section-title"><h2>Próximo <span>Evento</span></h2><p>Divulgação do próximo encontro da equipe, com informações principais e botão direto para WhatsApp.</p></div><div class="event-box"><div class="event-image"></div><div class="event-info"><span class="tag">Agenda Os Pimenta</span><h3>Encontro Automotivo Os Pimenta</h3><ul><li><strong>Data:</strong> A definir</li><li><strong>Horário:</strong> A definir</li><li><strong>Local:</strong> A definir</li><li><strong>Entrada:</strong> Consultar organização</li></ul><a class="btn" href="https://wa.me/5511999999999" target="_blank">Confirmar pelo WhatsApp</a></div></div></section>
+<section class="content" id="galeria"><div class="section-title"><h2>Galeria de <span>Eventos Visitados</span></h2><p>Espaço reservado para os próximos eventos da equipe.</p></div><div class="gallery-grid">
+
+<div class="gallery-card" onclick="openAlbum('primeira')">
+  <div class="gallery-img" style="background-image:url('eventos/primeira/capa.jpeg')"></div>
+  <div class="gallery-body">
+    <small>EVENTO REALIZADO</small>
+    <h3>Primeiro Evento Os Pimenta</h3>
+    <p>Evento criado pela equipe Os Pimenta. Confira os registros completos deste encontro.</p>
+    <div class="gallery-footer"><span>6 fotos</span><strong>Ver galeria →</strong></div>
+  </div>
+</div>
+
+
+<div class="gallery-card" onclick="openAlbum('segunda')">
+  <div class="gallery-img" style="background-image:url('eventos/segunda/capa.jpeg')"></div>
+  <div class="gallery-body">
+    <small>EVENTO REALIZADO</small>
+    <h3>Segundo Evento Os Pimenta</h3>
+    <p>Evento criado pela equipe Os Pimenta. Confira os registros completos deste encontro.</p>
+    <div class="gallery-footer"><span>10 fotos</span><strong>Ver galeria →</strong></div>
+  </div>
+</div>
+
+
+<div class="gallery-card" onclick="openAlbum('terceira')">
+  <div class="gallery-img" style="background-image:url('eventos/terceira/capa.jpeg')"></div>
+  <div class="gallery-body">
+    <small>EVENTO REALIZADO</small>
+    <h3>Terceiro Evento Os Pimenta</h3>
+    <p>Evento criado pela equipe Os Pimenta. Confira os registros completos deste encontro.</p>
+    <div class="gallery-footer"><span>4 fotos</span><strong>Ver galeria →</strong></div>
+  </div>
+</div>
+
+</div></section>
+<section class="content" id="equipe"><div class="about-grid"><div class="about-card"><h2>Sobre a equipe <span>Os Pimenta</span></h2><p>Equipe automotiva focada em encontros, eventos, projetos e registros dos melhores momentos da cena.</p><p>O site será preparado para celular, tablet e computador.</p></div><div class="about-card" id="patrocinadores"><h2>Redes e <span>Patrocinadores</span></h2><p>Espaço para divulgar Instagram, WhatsApp, apoiadores e patrocinadores.</p><p><strong>Instagram:</strong> @garage_pmt_011</p><a class="btn" href="https://instagram.com/garage_pmt_011" target="_blank">Abrir Instagram</a></div></div></section>
+<footer id="contato"><span>© 2026 Os Pimenta. Todos os direitos reservados.</span><span>Instagram • WhatsApp • Galeria de Eventos</span></footer><a class="whatsapp-float" href="https://wa.me/5511999999999" target="_blank">☏</a>
+
+<div class="album-modal" id="albumModal">
+  <div class="album-header">
+    <h2 id="albumTitle">Álbum <span>Os Pimenta</span></h2>
+    <button class="album-close" onclick="closeAlbum()">Fechar</button>
+  </div>
+  <div class="album-grid" id="albumGrid"></div>
+</div>
+<script>
+const albums = {"primeira":{title:"Primeiro Evento Os Pimenta",photos:["eventos/primeira/capa.jpeg","eventos/primeira/foto-01.jpeg","eventos/primeira/foto-02.jpeg","eventos/primeira/foto-03.jpeg","eventos/primeira/foto-04.jpeg","eventos/primeira/foto-05.jpeg"]},"segunda":{title:"Segundo Evento Os Pimenta",photos:["eventos/segunda/capa.jpeg","eventos/segunda/foto-01.jpeg","eventos/segunda/foto-02.jpeg","eventos/segunda/foto-03.jpeg","eventos/segunda/foto-04.jpeg","eventos/segunda/foto-05.jpeg","eventos/segunda/foto-06.jpeg","eventos/segunda/foto-07.jpeg","eventos/segunda/foto-08.jpeg","eventos/segunda/foto-09.jpeg"]},"terceira":{title:"Terceiro Evento Os Pimenta",photos:["eventos/terceira/capa.jpeg","eventos/terceira/foto-01.jpeg","eventos/terceira/foto-02.jpeg","eventos/terceira/foto-03.jpeg"]}};
+function openAlbum(slug){
+  const album = albums[slug];
+  if(!album) return;
+  document.getElementById('albumTitle').innerHTML = album.title;
+  document.getElementById('albumGrid').innerHTML = album.photos.map(src => `<img src="${src}" alt="${album.title}">`).join('');
+  document.getElementById('albumModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeAlbum(){
+  document.getElementById('albumModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeAlbum(); });
+</script>
+
+</body>
+</html>
