@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evento Beneficente</title>
+
+<style>
+body {
+    margin: 0;
+    background: #020202;
+    font-family: Arial, sans-serif;
+}
+
+.evento-section {
+    width: 100%;
+    padding: 40px 20px;
+    background: #020202;
+    box-sizing: border-box;
+}
+
+.evento-container {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    background: #050505;
+    border: 1px solid #1f1f1f;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.evento-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.evento-info {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.evento-tag {
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: #0a2a14;
+    color: #00ff66;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.evento-info h2 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.evento-detalhes p {
+    color: #dcdcdc;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.evento-botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-evento {
+    padding: 16px 28px;
+    border-radius: 14px;
+    background: #00d95f;
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-evento.secundario {
+    background: transparent;
+    border: 1px solid #00d95f;
+    color: #00d95f;
+}
+
+@media (max-width: 900px) {
+    .evento-container {
+        grid-template-columns: 1fr;
+    }
+
+    .evento-info {
+        padding: 30px;
+    }
+
+    .evento-info h2 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="evento-section">
+  <div class="evento-container">
+
+    <div class="evento-banner">
+      <img src="BENEFICIENTEPMT.png" alt="Evento Beneficente Os Pimenta">
+    </div>
+
+    <div class="evento-info">
+      <span class="evento-tag">Próximo Evento</span>
+
+      <h2>Encontro Beneficente Os Pimenta</h2>
+
+      <div class="evento-detalhes">
+        <p><strong>📅 Data:</strong> 14/06/2026</p>
+        <p><strong>⏰ Horário:</strong> Das 8h às 15h</p>
+        <p><strong>📍 Local:</strong> Estr. Ecoturística de Parelheiros, 6153</p>
+        <p><strong>🎟 Entrada:</strong> 1kg de alimento não perecível por carro</p>
+      </div>
+
+      <div class="evento-botoes">
+        <a href="https://maps.google.com" target="_blank" class="btn-evento">
+          Ver localização
+        </a>
+
+        <a href="https://instagram.com" target="_blank" class="btn-evento secundario">
+          Instagram
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
